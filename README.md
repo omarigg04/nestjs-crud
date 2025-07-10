@@ -31,8 +31,13 @@ where you can create, read, update and delete users.
 This repo is only the backend part of the project,
 for the frontend part you can check the [frontend repository]
 
-## Screenshots
 
+## Screenshots
+ass bellow
+<img width="300" alt="Image" src="https://github.com/user-attachments/assets/f0237034-2253-4db5-9378-c7a7bad54439" />
+<img width="300" alt="Image" src="https://github.com/user-attachments/assets/b4e36ee7-0f2a-4788-bcdc-dba804460be6" />
+<img width="300" alt="Image" src="https://github.com/user-attachments/assets/7fa3bbfb-dcce-4bda-963e-45b26b6537a9" />
+<img width="300" alt="Image" src="https://github.com/user-attachments/assets/0ce6ff81-0612-47a2-874c-39072c77bfa9" />
 
 
 ## Project setup
