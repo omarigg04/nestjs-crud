@@ -6,7 +6,9 @@ import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true }), // <--- Agrega esto
+    ConfigModule.forRoot({ 
+      isGlobal: true,
+      envFilePath: process.env.ENV || '.env.local' }), // <--- Agrega esto
     SequelizeModule.forRoot({
       dialect: 'mysql',
       host: process.env.DB_HOST,
