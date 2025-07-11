@@ -29,7 +29,7 @@ The project consists of a CRUD system applyed on a user management system,
 where you can create, read, update and delete users.
 
 This repo is only the backend part of the project,
-for the frontend part you can check the [frontend repository]
+for the frontend part you can check the https://github.com/omarigg04/flutter-crud
 
 
 ## Screenshots
