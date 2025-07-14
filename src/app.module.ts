@@ -8,7 +8,11 @@ import { UserModule } from './user/user.module';
   imports: [
     ConfigModule.forRoot({ 
       isGlobal: true,
-      envFilePath: process.env.ENV || '.env.local' }), // <--- Agrega esto
+      // Solo carga archivos .env en desarrollo o si no está en Vercel
+      envFilePath: process.env.NODE_ENV !== 'production' ? '.env.local' : undefined, // ✅
+      // Las variables de process.env tendrán prioridad sobre las de los archivos
+      ignoreEnvFile: process.env.NODE_ENV === 'production',
+    }),
     SequelizeModule.forRoot({
       dialect: 'mysql',
       host: process.env.DB_HOST,
