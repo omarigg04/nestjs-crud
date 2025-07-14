@@ -18,7 +18,7 @@ import { UserModule } from './user/user.module';
       database: process.env.DB_NAME,
       models: [User],
       autoLoadModels: true,
-      synchronize: false, // ponlo en true solo si quieres que cree la tabla automáticamente
+      synchronize: true, // ponlo en true solo si quieres que cree la tabla automáticamente
     }),
     SequelizeModule.forFeature([User]),
     UserModule,
