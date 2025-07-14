@@ -6,7 +6,9 @@ import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true }), // <--- Agrega esto
+    ConfigModule.forRoot({ 
+      isGlobal: true,
+      envFilePath: process.env.ENV || '.env.local' }), // <--- Agrega esto
     SequelizeModule.forRoot({
       dialect: 'mysql',
       host: process.env.DB_HOST,
@@ -16,7 +18,7 @@ import { UserModule } from './user/user.module';
       database: process.env.DB_NAME,
       models: [User],
       autoLoadModels: true,
-      synchronize: false, // ponlo en true solo si quieres que cree la tabla automáticamente
+      synchronize: true, // ponlo en true solo si quieres que cree la tabla automáticamente
     }),
     SequelizeModule.forFeature([User]),
     UserModule,
